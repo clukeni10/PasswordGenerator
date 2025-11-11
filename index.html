@@ -6,18 +6,102 @@
     <title>Gerador de Senhas</title>
 
     <link rel="stylesheet" href="style.css" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+
   <body>
-    <h1>Bem vindo ao Gerador de Senhas</h1>
+    <main class="container">
+      <header class="container-header">
+        <div class="container-header-icon" aria-hidden="true">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </div>
 
-    <div class="container">
-      <div class="password">
-        <div id="display"></div>
-      </div>
+        <div class="container-header-title">
+          <h1>Gerador de Senhas</h1>
+          <p>Cria palavras-passe seguras instantaneamente</p>
+        </div>
+      </header>
 
-      <button id="btn">Gerar Senha</button>
-    </div>
+      <section class="container-display" aria-live="polite">
+        <h2 id="generatedPassword" aria-label="Senha gerada"></h2>
+
+        <div class="container-display-bar">
+          <p><strong>Força:</strong></p>
+          <div class="strength-bar">
+            <div id="bar"></div>
+          </div>
+          <p id="msg"></p>
+        </div>
+      </section>
+
+      <section class="container-buttons">
+        <button id="copy" type="button" aria-label="Copiar senha">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span>Copiar</span>
+        </button>
+
+        <button id="generate" type="button" aria-label="Gerar nova senha">
+          <i class="fa fa-refresh" aria-hidden="true"></i>
+          <span>Gerar</span>
+        </button>
+      </section>
+
+      <section class="container-length">
+        <h3>Tamanho da Senha</h3>
+        <div class="range-div">
+          <label for="range"></label>
+          <input type="range" min="10" max="30" id="range" name="length" />
+          <output id="rangeValue" for="range">10</output>
+        </div>
+      </section>
+
+      <section class="container-password-options">
+        <h3>Opções de Caracteres</h3>
+
+        <ul class="options-list">
+          <li class="option-div">
+            <label for="lowercase">Letras minúsculas</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="lowercase" />
+              <span class="slider"></span>
+            </label>
+          </li>
+
+          <li class="option-div">
+            <label for="uppercase">Letras maiúsculas</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="uppercase" />
+              <span class="slider"></span>
+            </label>
+          </li>
+
+          <li class="option-div">
+            <label for="numbers">Números</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="numbers" />
+              <span class="slider"></span>
+            </label>
+          </li>
+
+          <li class="option-div">
+            <label for="symbols">Símbolos</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="symbols" />
+              <span class="slider"></span>
+            </label>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <div id="toast" role="status" aria-live="assertive"></div>
+
     <script src="./dist/script.js"></script>
   </body>
 </html>
