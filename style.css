@@ -386,3 +386,4 @@ input:checked + .slider::before {
     transform: translateX(16px);
   }
 }
+  
