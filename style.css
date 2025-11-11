@@ -294,3 +294,95 @@ input:checked + .slider::before {
     opacity: 0;
   }
 }
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .container-header-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .container-header-title p {
+    font-size: 0.8rem;
+  }
+
+  .container-display h1 {
+    font-size: 1.2rem;
+  }
+
+  .container-buttons button {
+    font-size: 0.9rem;
+    height: 36px;
+  }
+
+  .range-div output {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .option-div {
+    font-size: 0.9rem;
+  }
+
+  .toggle-switch {
+    width: 40px;
+    height: 22px;
+  }
+
+  .slider::before {
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(18px);
+  }
+}
+
+@media (max-width: 350px) {
+  .container-header-title h1 {
+    font-size: 1.2rem;
+  }
+
+  .container-display h1 {
+    font-size: 1rem;
+  }
+
+  .container-buttons button {
+    font-size: 0.8rem;
+    height: 32px;
+  }
+
+  .range-div output {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+
+  .option-div {
+    font-size: 0.8rem;
+  }
+
+  .toggle-switch {
+    width: 36px;
+    height: 20px;
+  }
+
+  .slider::before {
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(16px);
+  }
+}
