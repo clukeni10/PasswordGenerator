@@ -53,7 +53,7 @@ O objetivo deste projeto é demonstrar a criação de uma ferramenta simples, ú
 
 > Exemplo:
 > ```markdown
-> ![Preview](./images/123.jpg)
+> ![Preview do Password Generator](./images/123.jpg)
 > ```
 
 ---
